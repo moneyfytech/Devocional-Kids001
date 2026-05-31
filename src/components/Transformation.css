@@ -1,0 +1,150 @@
+.transformation { background: #FFFFFF; position: relative; }
+
+.transformation-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+/* Visual lado esquerdo */
+.transformation-visual {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.transformation-card-visual {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 360px;
+}
+.tv-inner {
+  background: linear-gradient(160deg, #FFFDE7, #E3F2FD 50%, #F3E5F5);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0,136,201,0.2), 0 0 0 3px rgba(0,136,201,0.1);
+}
+.tv-top-band {
+  height: 8px;
+  background: linear-gradient(90deg, #FF6B9D, #FF8C42, #FFD21F, #8CCB2E, #0088C9, #9B59B6);
+}
+.tv-scene {
+  padding: 32px 24px 24px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-height: 230px;
+}
+.tv-child { font-size: 5rem; }
+.tv-bible  { position: absolute; top: 24px; right: 24px; font-size: 2rem; }
+.tv-pencil { position: absolute; top: 40px; left: 24px; font-size: 1.6rem; }
+.tv-heart  { position: absolute; bottom: 30px; left: 20px; font-size: 1.4rem; animation: star-twinkle 2s infinite; }
+.tv-star   { position: absolute; top: 15px; left: 50%; font-size: 1.2rem; animation: star-twinkle 3s infinite 0.5s; }
+.tv-cross  { font-size: 2rem; position: absolute; bottom: 30px; right: 20px; animation: float-slow 5s infinite; }
+.tv-caption {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 13px 20px;
+  background: linear-gradient(90deg, #0088C9, #005A7A);
+  color: white;
+  font-weight: 700;
+  font-size: 0.88rem;
+}
+
+/* Círculos de fundo */
+.transformation-bg-circle { position: absolute; border-radius: 50%; opacity: 0.07; z-index: 0; }
+.transformation-bg-circle-1 { width: 300px; height: 300px; background: #0088C9; top: -40px; left: -40px; }
+.transformation-bg-circle-2 { width: 180px; height: 180px; background: #8CCB2E; bottom: -20px; right: -20px; }
+
+/* Stats flutuantes */
+.transformation-stat {
+  position: absolute;
+  background: white;
+  border-radius: 50px;
+  padding: 10px 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  z-index: 2;
+}
+.transformation-stat-1 { top: 10%; left: -6%; }
+.transformation-stat-2 { bottom: 10%; right: -6%; }
+.stat-emoji { font-size: 1.4rem; }
+.stat-num { font-weight: 900; font-size: 1rem; color: #005A7A; line-height: 1; }
+.stat-label { font-size: 0.73rem; color: #3A5068; font-weight: 600; }
+
+/* Conteúdo direita */
+.transformation-content {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.transformation-title { font-family: 'Fredoka One', cursive; color: #005A7A; line-height: 1.2; }
+.transformation-intro { color: #3A5068; font-size: 1rem; line-height: 1.7; }
+
+.transformation-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.transformation-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+.tl-icon {
+  width: 46px; height: 46px;
+  border-radius: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  color: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+.transformation-list li strong {
+  display: block;
+  color: #005A7A;
+  font-size: 0.95rem;
+  margin-bottom: 3px;
+}
+.transformation-list li p { font-size: 0.87rem; color: #3A5068; line-height: 1.55; }
+
+/* ── TABLET ── */
+@media (max-width: 900px) {
+  .transformation-layout {
+    grid-template-columns: 1fr;
+    gap: 36px;
+    text-align: center;
+  }
+  .transformation-visual { order: 2; }
+  .transformation-content { order: 1; }
+  .transformation-list li { text-align: left; }
+  .transformation-stat-1 { top: 4%; left: 0%; }
+  .transformation-stat-2 { bottom: 4%; right: 0%; }
+}
+
+/* ── MOBILE ── */
+@media (max-width: 600px) {
+  .transformation-visual { order: 2; } /* imagem abaixo */
+  .transformation-content { order: 1; }
+
+  .transformation-card-visual { max-width: 100%; }
+  .tv-scene { min-height: 180px; padding: 20px 16px 16px; }
+  .tv-child { font-size: 4rem; }
+
+  .transformation-stat-1, .transformation-stat-2 { display: none; }
+  .transformation-bg-circle-1, .transformation-bg-circle-2 { display: none; }
+
+  .transformation-title { font-size: clamp(1.5rem, 6.5vw, 2rem); }
+  .transformation-intro { font-size: 0.95rem; }
+}

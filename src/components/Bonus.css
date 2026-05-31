@@ -1,0 +1,125 @@
+.bonus { background: #0088C9; position: relative; }
+.bonus-inner { background: #0088C9; }
+
+.bonus-header { text-align: center; margin-bottom: 44px; }
+.bonus-title { font-family: 'Fredoka One', cursive; color: white; margin: 14px 0 10px; }
+.bonus-desc {
+  color: rgba(255,255,255,0.88);
+  font-size: 1.02rem;
+  max-width: 520px;
+  margin: 0 auto;
+}
+
+/* Grid 3 colunas desktop */
+.bonus-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+  margin-bottom: 40px;
+}
+
+.bonus-card {
+  background: white;
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.35s ease;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+  display: flex;
+  flex-direction: column;
+}
+.bonus-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 24px 56px rgba(0,0,0,0.22);
+}
+
+.bonus-num {
+  position: absolute;
+  top: 12px; right: 12px;
+  width: 32px; height: 32px;
+  border-radius: 50%;
+  color: white;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1rem;
+  display: flex; align-items: center; justify-content: center;
+  z-index: 2;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.2);
+}
+
+.bonus-img-wrap {
+  position: relative;
+  height: 175px;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+.bonus-img {
+  display: block; width: 100%; height: 100%;
+  object-fit: cover; object-position: top;
+  transition: transform 0.4s ease;
+}
+.bonus-card:hover .bonus-img { transform: scale(1.05); }
+.bonus-img-glow { position: absolute; inset: 0; pointer-events: none; }
+
+.bonus-value-row {
+  display: flex; align-items: center; gap: 6px;
+  padding: 13px 16px 0;
+  font-size: 0.82rem;
+}
+.bonus-value-label { color: #888; font-weight: 600; }
+.bonus-value-price { font-size: 1rem; font-weight: 800; text-decoration: line-through; opacity: 0.7; }
+
+.bonus-card-title { font-family: 'Fredoka One', cursive; font-size: 1.05rem; padding: 5px 16px 0; line-height: 1.25; }
+.bonus-card-desc { font-size: 0.85rem; color: #3A5068; line-height: 1.6; padding: 7px 16px 0; flex: 1; }
+
+.bonus-free-tag {
+  margin: 12px 16px;
+  background: #F0FFF4;
+  border: 2px solid #8CCB2E;
+  border-radius: 50px;
+  padding: 7px 14px;
+  text-align: center;
+  font-weight: 800;
+  font-size: 0.8rem;
+  color: #4A8B1E;
+}
+.bonus-bottom-bar { height: 5px; width: 100%; flex-shrink: 0; }
+
+/* Banner total */
+.bonus-total-banner {
+  background: rgba(255,255,255,0.12);
+  border: 2px solid rgba(255,255,255,0.25);
+  border-radius: 24px;
+  padding: 28px 36px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  backdrop-filter: blur(10px);
+}
+.btb-label { color: rgba(255,255,255,0.8); font-size: 1rem; font-weight: 600; margin-bottom: 8px; }
+.btb-prices {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 8px; flex-wrap: wrap;
+}
+.btb-original { font-size: 1.05rem; color: rgba(255,255,255,0.5); text-decoration: line-through; }
+.btb-arrow { color: rgba(255,255,255,0.4); font-size: 1.2rem; }
+.btb-price { font-family: 'Fredoka One', cursive; font-size: 1.9rem; color: #FFD21F; text-shadow: 0 2px 8px rgba(0,0,0,0.2); }
+.btb-sub { font-size: 0.84rem; color: rgba(255,255,255,0.7); font-weight: 600; }
+
+/* ── TABLET ── */
+@media (max-width: 900px) {
+  .bonus-grid { grid-template-columns: 1fr; max-width: 440px; margin-left: auto; margin-right: auto; }
+  .bonus-total-banner { flex-direction: column; text-align: center; padding: 24px 20px; }
+  .btb-prices { justify-content: center; }
+  .btb-price { font-size: 2rem; }
+}
+
+/* ── MOBILE ── */
+@media (max-width: 560px) {
+  .bonus-grid { max-width: 100%; }
+  .bonus-img-wrap { height: 200px; }
+  .bonus-total-banner { border-radius: 20px; padding: 20px 16px; gap: 20px; }
+  .btb-price { font-size: 1.8rem; }
+  .bonus-title { font-size: clamp(1.5rem, 6.5vw, 2rem); }
+  .bonus-desc { font-size: 0.95rem; }
+}

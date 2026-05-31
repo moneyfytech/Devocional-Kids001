@@ -1,0 +1,180 @@
+.footer {
+  background: linear-gradient(160deg, #002A3D, #003D55);
+  color: white;
+  padding: 60px 24px 32px;
+}
+
+.footer-inner {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  gap: 48px;
+  margin-bottom: 40px;
+}
+
+/* Brand */
+.footer-logo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 16px;
+}
+
+.footer-logo-icon {
+  font-size: 2.5rem;
+  filter: drop-shadow(0 0 8px rgba(255,210,31,0.4));
+}
+
+.footer-logo-name {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.4rem;
+  color: white;
+  line-height: 1.1;
+}
+
+.footer-logo-sub {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.5);
+  font-weight: 600;
+}
+
+.footer-brand-desc {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.65);
+  line-height: 1.65;
+}
+
+/* Info */
+.footer-info-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.1rem;
+  color: #FFD21F;
+  margin-bottom: 16px;
+}
+
+.footer-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-link {
+  color: rgba(255,255,255,0.65);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.footer-link:hover {
+  color: #FFD21F;
+}
+
+/* CTA column */
+.footer-price {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 16px;
+}
+
+.footer-price-from {
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.5);
+  font-weight: 600;
+}
+
+.footer-price-now {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.8rem;
+  color: #FFD21F;
+  line-height: 1.1;
+}
+
+.footer-cta-btn {
+  font-size: 0.9rem;
+  padding: 14px 20px;
+  width: 100%;
+}
+
+/* Divider */
+.footer-divider {
+  height: 1px;
+  background: rgba(255,255,255,0.1);
+  margin-bottom: 28px;
+}
+
+/* Bottom */
+.footer-bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.footer-copy {
+  font-size: 0.85rem;
+  color: rgba(255,255,255,0.5);
+  font-weight: 600;
+}
+
+.footer-disclaimer {
+  font-size: 0.78rem;
+  color: rgba(255,255,255,0.35);
+  line-height: 1.5;
+  max-width: 700px;
+}
+
+.footer-seals {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 0.82rem;
+  color: rgba(255,255,255,0.5);
+  font-weight: 700;
+  margin-top: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer {
+    text-align: center;
+  }
+  .footer-logo {
+    justify-content: center;
+  }
+  .footer-links {
+    align-items: center;
+  }
+  .footer-link {
+    justify-content: center;
+  }
+  .footer-price {
+    align-items: center;
+  }
+  .footer-seals {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .footer-disclaimer {
+    margin: 0 auto;
+  }
+  .footer-cta-btn {
+    margin: 0 auto;
+    max-width: 420px;
+  }
+}

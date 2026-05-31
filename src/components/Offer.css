@@ -1,0 +1,332 @@
+.offer {
+  background: linear-gradient(160deg, #E8F7FF 0%, #D0EEFF 50%, #C5E8FF 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.offer-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(0,136,201,0.12) 1.5px, transparent 1.5px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+.offer-inner {
+  position: relative;
+  z-index: 1;
+}
+
+.offer-super-badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.8rem;
+  color: #005A7A;
+  margin-bottom: 32px;
+  background: white;
+  padding: 12px 32px;
+  border-radius: 999px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 32px;
+}
+
+.offer-fire {
+  font-size: 1.4rem;
+  animation: float-fast 1.5s ease-in-out infinite;
+}
+
+/* Main card */
+.offer-card {
+  background: white;
+  border-radius: 32px;
+  box-shadow: 0 24px 80px rgba(0,136,201,0.2), 0 0 0 2px rgba(0,136,201,0.1);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1.3fr;
+  min-height: 600px;
+}
+
+/* LEFT: Mockup */
+.offer-mockup {
+  background: linear-gradient(160deg, #005A7A, #003D55);
+  padding: 40px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.offer-mockup::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+.offer-product {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  max-width: 260px;
+}
+
+/* Main product image */
+.op-main-img-wrap {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 16px 48px rgba(0,0,0,0.45);
+  margin-bottom: 16px;
+}
+
+.op-main-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+}
+
+.op-main-img-wrap:hover .op-main-img {
+  transform: scale(1.03);
+}
+
+.op-main-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #0088C9, #005A7A);
+  color: white;
+  padding: 7px 18px;
+  border-radius: 999px;
+  font-weight: 800;
+  font-size: 0.78rem;
+  white-space: nowrap;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  font-family: 'Nunito', sans-serif;
+}
+
+/* Bonus thumbnail cards */
+.op-bonus-cards {
+  display: flex;
+  gap: 10px;
+}
+
+.op-bonus-card {
+  flex: 1;
+  background: rgba(255,255,255,0.95);
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0;
+  transition: transform 0.3s ease;
+}
+
+.op-bonus-card:hover {
+  transform: translateY(-4px);
+}
+
+.op-bonus-img {
+  display: block;
+  width: 100%;
+  height: 72px;
+  object-fit: cover;
+  object-position: top;
+}
+
+.op-bonus-label {
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 800;
+  text-align: center;
+  padding: 6px 4px;
+  line-height: 1.3;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* RIGHT: Details */
+.offer-details {
+  padding: 40px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.offer-headline {
+  font-family: 'Fredoka One', cursive;
+  font-size: clamp(1.2rem, 2.5vw, 1.6rem);
+  color: #005A7A;
+  line-height: 1.3;
+}
+
+/* Checklist */
+.offer-checklist {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.offer-checklist li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  color: #3A5068;
+}
+
+.ocl-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* Pricing */
+.offer-pricing {
+  background: linear-gradient(135deg, #F0FFF4, #E3F2FD);
+  border-radius: 16px;
+  padding: 20px 24px;
+  border: 2px solid rgba(0,136,201,0.15);
+}
+
+.offer-old-price {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.oop-label {
+  font-size: 0.85rem;
+  color: #888;
+  font-weight: 600;
+}
+
+.oop-value {
+  font-size: 1rem;
+  color: #888;
+  text-decoration: line-through;
+  font-weight: 700;
+}
+
+.offer-new-price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 6px;
+}
+
+.onp-label {
+  font-size: 0.9rem;
+  color: #005A7A;
+  font-weight: 700;
+}
+
+.onp-value {
+  font-family: 'Fredoka One', cursive;
+  font-size: 2.4rem;
+  color: #0088C9;
+  line-height: 1;
+}
+
+.offer-installments {
+  font-size: 0.82rem;
+  color: #3A5068;
+  font-weight: 600;
+}
+
+/* CTA */
+.offer-cta-btn {
+  width: 100%;
+  font-size: 1.1rem;
+  padding: 20px 32px;
+}
+
+.offer-cta-note {
+  font-size: 0.82rem;
+  color: #3A5068;
+  font-weight: 600;
+  text-align: center;
+  margin-top: -8px;
+}
+
+/* Seals */
+.offer-seals {
+  display: flex;
+  gap: 16px;
+  justify-content: space-between;
+  padding-top: 8px;
+  border-top: 2px solid #F0F4F8;
+}
+
+.offer-seal {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex: 1;
+}
+
+.seal-icon {
+  font-size: 1.5rem;
+  flex-shrink: 0;
+}
+
+.seal-label {
+  font-weight: 800;
+  font-size: 0.8rem;
+  color: #005A7A;
+  line-height: 1.2;
+}
+
+.seal-sub {
+  font-size: 0.72rem;
+  color: #3A5068;
+  font-weight: 600;
+}
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+  .offer-card {
+    grid-template-columns: 1fr;
+  }
+
+  .offer-mockup {
+    padding: 32px;
+  }
+
+  .offer-details {
+    padding: 28px 24px;
+  }
+
+  .offer-seals {
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .offer-super-badge {
+    font-size: 1.4rem;
+    padding: 10px 20px;
+  }
+
+  .offer-details {
+    padding: 20px 16px;
+  }
+
+  .onp-value {
+    font-size: 2rem;
+  }
+}

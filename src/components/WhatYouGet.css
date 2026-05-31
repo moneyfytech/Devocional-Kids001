@@ -1,0 +1,104 @@
+.wyg { background: #005A7A; position: relative; }
+.wyg-inner { background: #005A7A; }
+
+.wyg-header { text-align: center; margin-bottom: 44px; }
+.wyg-title {
+  font-family: 'Fredoka One', cursive;
+  color: white;
+  margin: 14px 0 10px;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+.wyg-desc { color: rgba(255,255,255,0.8); font-size: 1.02rem; }
+
+/* Grid 3 colunas desktop */
+.wyg-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  margin-bottom: 44px;
+}
+
+.wyg-card {
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.35s ease;
+  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+}
+.wyg-card:hover {
+  background: rgba(255,255,255,0.13);
+  transform: translateY(-7px);
+  border-color: rgba(255,255,255,0.28);
+  box-shadow: 0 20px 48px rgba(0,0,0,0.22);
+}
+
+/* Imagem produto */
+.wyg-img-wrap {
+  position: relative;
+  overflow: hidden;
+  height: 155px;
+  flex-shrink: 0;
+}
+.wyg-img {
+  display: block; width: 100%; height: 100%;
+  object-fit: cover; object-position: top;
+  transition: transform 0.4s ease;
+}
+.wyg-card:hover .wyg-img { transform: scale(1.06); }
+.wyg-img-overlay {
+  position: absolute; inset: 0;
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+}
+.wyg-card:hover .wyg-img-overlay { opacity: 1; }
+.wyg-img-icon { font-size: 2.6rem; filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4)); }
+
+/* Corpo */
+.wyg-card-body {
+  padding: 16px 16px 12px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+}
+.wyg-badge-row { margin-bottom: 2px; }
+.wyg-item-badge {
+  padding: 4px 11px;
+  border-radius: 999px;
+  font-size: 0.68rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.4px;
+}
+.wyg-card-title {
+  font-family: 'Fredoka One', cursive;
+  font-size: 1rem;
+  line-height: 1.25;
+}
+.wyg-card-desc { font-size: 0.84rem; color: rgba(255,255,255,0.72); line-height: 1.55; }
+.wyg-card-line { height: 3px; width: 100%; flex-shrink: 0; }
+.wyg-cta { text-align: center; }
+
+/* ── TABLET ── */
+@media (max-width: 900px) {
+  .wyg-grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+}
+
+/* ── MOBILE ── */
+@media (max-width: 560px) {
+  .wyg-grid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .wyg-img-wrap { height: 200px; }
+  .wyg-card-body { padding: 18px 18px 14px; }
+  .wyg-card-title { font-size: 1.05rem; }
+  .wyg-title { font-size: clamp(1.5rem, 6.5vw, 2rem); }
+}

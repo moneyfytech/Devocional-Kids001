@@ -1,0 +1,169 @@
+.before-after {
+  background: #FFD21F;
+  position: relative;
+}
+
+.ba-inner {
+  background: #FFD21F;
+}
+
+.ba-header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.ba-title {
+  font-family: 'Fredoka One', cursive;
+  color: #005A7A;
+  margin: 16px 0 12px;
+}
+
+.ba-desc {
+  color: #3A5068;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+/* Comparison layout */
+.ba-comparison {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.ba-side {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Labels */
+.ba-label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 1.3rem;
+  padding: 10px 20px;
+  border-radius: 50px;
+}
+
+.ba-label-before {
+  background: #FFEBEE;
+  color: #C62828;
+}
+
+.ba-label-after {
+  background: #E8F5E9;
+  color: #2E7D32;
+}
+
+/* Cards */
+.ba-card {
+  background: white;
+  border-radius: 20px;
+  padding: 24px 20px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Lists */
+.ba-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.ba-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.ba-item-before { color: #B71C1C; }
+.ba-item-after { color: #1B5E20; }
+
+.ba-item-icon {
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+/* Child emoji */
+.ba-child-sad, .ba-child-happy {
+  position: absolute;
+  bottom: 12px;
+  right: 16px;
+  font-size: 2.5rem;
+  opacity: 0.4;
+  line-height: 1;
+}
+
+/* Arrow center */
+.ba-arrow-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.ba-arrow-circle {
+  width: 56px;
+  height: 56px;
+  background: linear-gradient(135deg, #0088C9, #005A7A);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: white;
+  box-shadow: 0 4px 16px rgba(0,136,201,0.4);
+  animation: pulse-btn 2s infinite;
+}
+
+.ba-mini-mockup {
+  background: white;
+  border-radius: 16px;
+  padding: 12px 14px;
+  text-align: center;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+  font-size: 1.8rem;
+}
+
+.ba-mini-mockup p {
+  font-family: 'Fredoka One', cursive;
+  font-size: 0.72rem;
+  color: #005A7A;
+  line-height: 1.2;
+  margin-top: 4px;
+}
+
+/* CTA */
+.ba-cta {
+  text-align: center;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .ba-comparison {
+    grid-template-columns: 1fr;
+    max-width: 480px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ba-arrow-center {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .ba-arrow-circle span {
+    transform: rotate(90deg);
+    display: inline-block;
+  }
+}
